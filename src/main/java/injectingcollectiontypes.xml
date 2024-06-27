@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:content="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean
+		class="com.thecoderstv.springcore.injectingcollectiontypes.Emp"
+		name="emp1">
+		<property name="name" value="Shubham" />
+
+		<property name="phones">
+			<list>
+				<value>1212121212</value>
+				<value>1212122322</value>
+				<value>1212444442</value>
+			</list>
+		</property>
+
+		<property name="addr">
+			<set>
+				<value>Delhi</value>
+				<value>Kanpur</value>
+				<value>Lucknow</value>
+			</set>
+		</property>
+
+		<property name="course">
+			<map>
+				<entry key="java" value="2000 Rs" />
+				<entry key="c" value="1000 Rs" />
+				<entry key="c++" value="1500 Rs" />
+			</map>
+		</property>
+	</bean>
+
+</beans>
