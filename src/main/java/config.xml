@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:content="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean class="com.thecoderstv.springcore.setterinjection.Student"
+		name="student1">
+		<property name="studentId" value="101" />
+		<property name="studentName" value="Ram Singh" />
+		<property name="studentAddr" value="Kanpur" />
+	</bean>
+
+	<bean class="com.thecoderstv.springcore.setterinjection.Student"
+		name="student2">
+		<property name="studentId">
+			<value>102</value>
+		</property>
+		<property name="studentName">
+			<value>Ramesh Tiwari</value>
+		</property>
+		<property name="studentAddr">
+			<value>Kanpur</value>
+		</property>
+	</bean>
+
+	<bean class="com.thecoderstv.springcore.setterinjection.Address" name="addr1">
+		<property name="pincode" value="208006"/>
+		<property name="city" value="kanpur"/>
+	</bean>
+
+</beans>
