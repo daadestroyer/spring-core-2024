@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:content="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- setter injection -->
+
+	<bean class="com.thecoderstv.springcore.pschema.propertyinjection.Student"
+		name="student1">
+		<property name="studentId" value="101" />
+		<property name="studentName" value="Ram Singh" />
+		<property name="studentAddr" value="Kanpur" />
+	</bean>
+
+	<bean class="com.thecoderstv.springcore.pschema.propertyinjection.Student"
+		name="student2">
+		<property name="studentId">
+			<value>102</value>
+		</property>
+		<property name="studentName">
+			<value>Ramesh Tiwari</value>
+		</property>
+		<property name="studentAddr">
+			<value>Kanpur</value>
+		</property>
+	</bean>
+
+	<!-- property injection using p - schema -->
+	<bean
+		class="com.thecoderstv.springcore.pschema.propertyinjection.Student"
+		name="stud1" p:studentId="103" p:studentName="Shubham"
+		p:studentAddr="Kanpur" />
+
+</beans>
