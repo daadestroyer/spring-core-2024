@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:content="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean class="com.thecoderstv.springcore.injectingreferencetypes.Certificate" name="cert1">
+		<property name="certId" value="111"/>
+		<property name="certName" value="Java Fullstack"></property>
+	</bean>
+
+
+	<bean class="com.thecoderstv.springcore.injectingreferencetypes.Employee" name="emp1">
+		<property name="empId" value="101"/>
+		<property name="empName" value="Shubham Nigam"/>
+		<property name="cert" ref="cert1"/>
+	</bean>
+</beans>
