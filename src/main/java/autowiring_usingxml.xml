@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:content="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.thecoderstv.springcore.autowiring_usingxml.Address" name="address">
+		<property name="city" value="kanpur" />
+		<property name="street" value="K block"/>
+	</bean>
+	
+	<!-- <bean class="com.thecoderstv.springcore.autowiring_usingxml.Address" name="address">
+		<property name="city" value="lucknow" />
+		<property name="street" value="G block"/>
+	</bean> -->
+	
+	
+	<bean class="com.thecoderstv.springcore.autowiring_usingxml.Employee" name="emp1" autowire="constructor">
+	 <property name="empId" value="101" />
+	 <property name="empName" value="Shubahm"/>
+	 <property name="address" ref="address"/>
+	</bean>
+
+</beans>
