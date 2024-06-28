@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:content="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.thecoderstv.springcore.constructorinjection.Cert" name="cert1">
+		<constructor-arg name="certId" value="111" />
+		<constructor-arg name="certName" value="" />
+	</bean>
+	
+	<bean class="com.thecoderstv.springcore.constructorinjection.Person" name="person1">
+		<constructor-arg name="personId" value="101" type="int"/>
+		<constructor-arg name="personName" value="Shubham"/>
+		
+		<constructor-arg name="phone">
+			<list>
+				<value>12121212</value>
+				<value>12123221212</value>
+				<value>121233221212</value>
+			</list>
+		</constructor-arg>
+		
+		<constructor-arg ref="cert1" />
+	</bean>
+
+</beans>
