@@ -1,11 +1,13 @@
 package com.thecoderstv.springcore.autowiring_usingannotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 	private int empId;
 	private String empName;
-
+	@Autowired
+	@Qualifier("address1")
 	private Address address;
 
 	
@@ -43,7 +45,7 @@ public class Employee {
 	public Address getAddress() {
 		return address;
 	}
-	@Autowired
+	
 	public void setAddress(Address address) {
 		System.out.println("setter injection");
 		this.address = address;

@@ -10,7 +10,12 @@
 
 	<content:annotation-config/>
 	
-	<bean class="com.thecoderstv.springcore.autowiring_usingannotation.Address" name="addresstemp">
+	<bean class="com.thecoderstv.springcore.autowiring_usingannotation.Address" name="address1">
+		<property name="city" value="kanpur" />
+		<property name="street" value="K block"/>
+	</bean>
+	
+	<bean class="com.thecoderstv.springcore.autowiring_usingannotation.Address" name="address2">
 		<property name="city" value="kanpur" />
 		<property name="street" value="K block"/>
 	</bean>
@@ -20,5 +25,7 @@
 	 <property name="empId" value="101" />
 	 <property name="empName" value="Shubahm"/>
 	</bean>
+	
+	
 
 </beans>
