@@ -16,8 +16,8 @@
 	</bean>
 	
 	<bean class="com.thecoderstv.springcore.autowiring_usingannotation.Address" name="address2">
-		<property name="city" value="kanpur" />
-		<property name="street" value="K block"/>
+		<property name="city" value="lucknow" />
+		<property name="street" value="C block"/>
 	</bean>
 	
 		

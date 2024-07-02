@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class Employee {
 	private int empId;
 	private String empName;
+	
 	@Autowired
-	@Qualifier("address1")
+	@Qualifier("address2")
 	private Address address;
 
-	
 	public Employee(Address address) {
 		System.out.println("constructor injection");
 		this.address = address;
@@ -45,7 +45,7 @@ public class Employee {
 	public Address getAddress() {
 		return address;
 	}
-	
+
 	public void setAddress(Address address) {
 		System.out.println("setter injection");
 		this.address = address;
